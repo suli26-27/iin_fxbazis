@@ -1,0 +1,13 @@
+-- database: ../database.db
+
+
+create table employees(
+    id integer not null primary key autoincrement,
+    name text,
+    city text,
+    salary integer
+);
+
+
+
+select * from employees;

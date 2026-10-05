@@ -1,0 +1,12 @@
+-- database: ../database.db
+
+insert into employees 
+(name, city, salary)
+values
+("Tana Elemér", "Szeged", 397),
+("Paló Árpád", "Szolonok", 392),
+("Kine Irén", "Szeged", 395),
+("Toli Ferenc", "Pécs", 394),
+("Doma Lili", "Szeged", 398);
+
+
