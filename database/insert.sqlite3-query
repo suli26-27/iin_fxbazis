@@ -10,3 +10,7 @@ values
 ("Doma Lili", "Szeged", 398);
 
 
+
+update employees 
+set salary=399
+where name="Doma Lili";

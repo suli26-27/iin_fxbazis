@@ -4,7 +4,7 @@ import java.util.List;
 
 import com.example.models.Employee;
 import com.example.models.EmployeeService;
-import com.example.models.Sqlite;
+import com.example.models.Mariadb;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -36,15 +36,15 @@ public class MainController {
         cityCol.setCellValueFactory(new PropertyValueFactory<>("city"));
         salaryCol.setCellValueFactory(new PropertyValueFactory<>("salary"));
 
-        
+        EmployeeService employeeService = new EmployeeService(new Mariadb());
+        List<Employee> empList = employeeService.getEmployees();
+
+        table.getItems().addAll(empList);
     }
 
     @FXML 
     void goButton(ActionEvent event) {
         System.out.println("Teszt...");
-        EmployeeService employeeService = new EmployeeService(new Sqlite());
-        List<Employee> empList = employeeService.getEmployees();
-        System.out.println(empList);
     }
 
 }
