@@ -11,3 +11,8 @@ create table employees(
 
 
 select * from employees;
+
+
+delete from employees;
+
+drop table employees;
